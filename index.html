@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="username" name="username" >
+        <button  type="button" id="btn">submit</button>
+        <button id="reset" type="button">reset</button>
+    </form>
+    
+    <script type="text/javascript"> 
+        /*let ul = document.createElement("ul");
+         
+        document.querySelector("#btn").addEventListener("click",function(){
+            let username1 =document.getElementById("username").value;
+            let li = document.createElement("li");
+        console.log(username1);
+        li.textContent=username1;
+        ul.appendChild(li);
+        
+        li.style.cssText=" color:red; font-size:20px; font-weight:bold ;list-style-type:none"
+        })
+        document.querySelector("#reset").addEventListener("click",function(){
+             let lastItem = ul.lastElementChild; // Get the last <li> element
+            if (lastItem) {
+                lastItem.remove(); // Remove the last <li>
+            }
+          
+        })
+    document.body.appendChild(ul);
+        
+        */
+       let ul = document.createElement("ul");
+    document.querySelector("#btn").addEventListener("click",function(){
+        let li = document.createElement("li");
+       let username = document.getElementById("username").value;
+        li.textContent = username;
+        ul.appendChild(li);
+        li.style.cssText="color:red;font-style:italic;list-style-type:none"
+    })
+    document.querySelector("#reset").addEventListener("click",function(){
+       let lastelement = ul.lastElementChild;
+       if(lastelement){
+        lastelement.remove();
+       }
+    })
+    document.body.appendChild(ul);
+
+      
+         
+    </script>
+</body>
+</html>
